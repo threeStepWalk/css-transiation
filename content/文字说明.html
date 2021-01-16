@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Hover Effect</title>
+    <style>
+        body{
+            background: #003444;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            margin: 40px auto;
+            width: 300px;
+            background-color: antiquewhite;
+        }
+
+        .imageBox{
+            position: relative;
+            overflow: hidden;/*内容溢出框外被隐藏*/
+        }
+
+        .imageBox img{
+            width: 100%;
+            transition:.5s;/*需要0.5s完成*/
+        }
+
+        .textBox{
+            position: absolute;
+            top: 0;
+            left:-100%;/*通过与overflow的配合隐藏*/
+            width: 100%;
+            height: 100%;
+            background: rgba(84, 30, 36, .9);
+            transition: .5s;
+        }
+
+        .textBox h1{
+            font-size: 15px;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            font-family: arial;
+        }
+
+        .imageBox:hover .textBox{
+            left: 0%;
+        }
+
+        .imageBox:hover img{
+            transform: scale(1.2);/*图片高宽都放大1.2倍*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="imageBox"> 
+            <img src="../static/clock.png">
+            <div class="textBox">
+                <h1>Image Hover Effect</h1>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

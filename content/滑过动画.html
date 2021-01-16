@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #ff008b;
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            padding: 0;
+            margin: 0;
+            border: 10px solid #fff;
+            display: inline-block; /*使元素可以设置宽高，边距等，不会独占一行（行内元素不能设置宽高等），
+            缺点是元素间会有4px的间隙，消除方法是设置font-size：0；*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);/*调整ul的位置,详见 2.html */
+        }
+
+        ul li {
+            list-style: none;
+            color: #fff;
+            float: left;
+            font-size: 5em;
+            font-family: 'arial';
+            transition: .9s;/*总共需要延迟0.9秒完成*/
+        }
+
+        ul:hover li{
+            transform: rotateY(360deg);  /* 沿着y轴360度3D旋转 */
+        }
+
+        ul:hover li:nth-child(1){/* li的父级元素的第一个孩子*/
+            transition-delay:.9s ;  /* 鼠标覆盖上后延迟0.9秒后执行*/
+        }
+
+        ul:hover li:nth-child(2){
+            transition-delay:.6s ;
+        }
+
+        ul:hover li:nth-child(3){
+            transition-delay:.3s ;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>T</li>
+        <li>U</li>
+        <li>T</li>
+        <li>O</li>
+        <li>R</li>
+        <li>I</li>
+        <li>A</li>
+        <li>L</li>
+        <div style="clear: both;"></div>
+    </ul>
+</body>
+</html>

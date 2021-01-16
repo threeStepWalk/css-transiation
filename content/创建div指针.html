@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d div box pounter</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: #3070ff;
+        }
+        .container{
+            width: 500px;
+            height: 300px;
+            color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            border: 2px solid #fff;
+            box-sizing:border-box ;
+            font-family: arial;
+        }
+        .container:before{
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(18px) rotate(45deg);
+            border-bottom: 2px solid #fff;
+            border-right: 2px solid #fff;
+            background: #3070ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PLZ SUBSCRIBE OUR CHANNEL</h1>
+        <p>Our diurnal existence is divided into two phases, as distinct as day and night. We call them work and play. We work so many hours a day. And, when we have allowed the necessary minimum for such.</p>
+    </div>
+</body>
+</html>
